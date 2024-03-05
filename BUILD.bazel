@@ -3,3 +3,11 @@ load("@gazelle//:def.bzl", "gazelle")
 # gazelle:prefix github.com/emmetcaulfield/go-bazel-hello
 # gazelle:build_file_name BUILD.bazel
 gazelle(name = "gazelle")
+
+load("@rules_go//go:def.bzl", "nogo")
+
+nogo(
+    name = "default_nogo",
+    vet = True,
+    visibility = ["//visibility:public"],
+)
