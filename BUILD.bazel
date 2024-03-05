@@ -1,0 +1,5 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix github.com/emmetcaulfield/go-hello
+# gazelle:build_file_name BUILD.bazel
+gazelle(name = "gazelle")

@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "goodbye_lib",
+    srcs = ["goodbye.go"],
+    importpath = "github.com/emmetcaulfield/go-hello/cmd/goodbye",
+    visibility = ["//visibility:private"],
+    deps = ["//pkg/say"],
+)
+
+go_binary(
+    name = "goodbye",
+    embed = [":goodbye_lib"],
+    visibility = ["//visibility:public"],
+)

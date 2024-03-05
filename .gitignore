@@ -1,0 +1,5 @@
+cmds.mk
+MODULE.bazel
+MODULE.bazel.lock
+bazel-*
+*~
