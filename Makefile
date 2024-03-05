@@ -33,7 +33,8 @@ reallyclean: clean
 .PHONY: pristine
 pristine: clean
 	bazel clean --expunge
+	rm -f MODULE.bazel.lock
 
-cmds.mk: Makefile WORKSPACE cmd/*/BUILD.bazel
+cmds.mk: Makefile MODULE.bazel cmd/*/BUILD.bazel
 	@echo -n 'cmds := ' > $@
 	@bazel query 'kind("go_binary", //...)' 2>/dev/null | xargs >> $@

@@ -1,4 +1,4 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+load("@rules_go//go:def.bzl", "go_binary", "go_library")
 
 go_binary(
     name = "hello",
@@ -9,7 +9,7 @@ go_binary(
 go_library(
     name = "hello_lib",
     srcs = ["hello.go"],
-    importpath = "github.com/emmetcaulfield/go-hello/cmd/hello",
+    importpath = "github.com/emmetcaulfield/go-bazel-hello/cmd/hello",
     visibility = ["//visibility:private"],
     deps = ["//pkg/say"],
 )

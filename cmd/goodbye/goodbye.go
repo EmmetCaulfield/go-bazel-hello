@@ -1,6 +1,6 @@
 package main
 
-import "github.com/emmetcaulfield/go-hello/pkg/say"
+import "github.com/emmetcaulfield/go-bazel-hello/pkg/say"
 
 func main() {
 	say.Say("Goodbye, World!")
